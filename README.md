@@ -1,43 +1,34 @@
-# Brain Tumor Segmentation using U-Net
+# Brain Tumor Segmentation using U-Net (PyTorch)
 
 ## Overview
+This project implements a U-Net convolutional neural network for brain tumor segmentation from MRI scans using PyTorch.  
+The model is trained to predict tumor masks from MRI images and is evaluated using the Dice coefficient, a common metric for medical image segmentation.
+
+This project was built to understand the full deep learning pipeline, including model architecture, data loading, training, evaluation, and prediction visualization.
+
+---
 
 ## Model
-- U-Net
-- BCE + Dice Loss
-- Adam Optimizer
+- Architecture: U-Net
+- Loss Function: BCE + Dice Loss
+- Optimizer: Adam
+- Evaluation Metric: Dice Score
+- Framework: PyTorch
+
+U-Net is a convolutional neural network designed for biomedical image segmentation. It uses an encoder–decoder structure with skip connections to preserve spatial information.
+
+---
 
 ## Results
-Dice Score: ~0.80
+The model achieved a Dice score of approximately **0.80** on the validation set.
+
+The model is able to correctly detect tumor regions and produce segmentation masks that closely match the ground truth.
+
+---
 
 ## Example Prediction
-![Prediction](results/predictions.png)
+Below is an example of the model’s prediction compared to the ground truth mask.
 
-## Project Structure
-brain-tumor-unet/
-│
-├── data/
-│   ├── images/          # MRI images
-│   └── masks/           # Tumor masks
-│
-├── models/
-│   └── unet.py          # U-Net architecture
-│
-├── dataset.py           # Dataset class
-├── train.py             # Training script
-├── eval.py              # Evaluation / prediction script
-├── utils.py             # Loss + Dice score
-│
-├── results/
-│   └── predictions.png  # Example predictions
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-## How to Run
-python train.py
-python eval.py
+![Prediction](results/prediction2.png)
 
-## What I Learned
-
-## Future Improvements
+---
