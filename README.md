@@ -2,20 +2,7 @@
 
 This project implements a U-Net model in PyTorch for brain tumor segmentation from MRI scans.
 
-## Project Structure
-
-brain-tumor-unet/
-├── data/
-├── models/
-│   └── unet.py
-├── dataset.py
-├── train.py
-├── eval.py
-├── utils.py
-├── results/
-│   └── predictions.png
-├── README.md
-└── requirements.txt
+<pre> ## Project Structure ``` brain-tumor-unet/ │ ├── data/ │ ├── images/ │ └── masks/ │ ├── models/ │ └── unet.py │ ├── dataset.py ├── train.py ├── eval.py ├── utils.py │ ├── results/ │ └── predictions.png │ ├── README.md ├── requirements.txt └── .gitignore ``` </pre>
 
 ## Features
 - U-Net architecture implemented from scratch
@@ -26,6 +13,12 @@ brain-tumor-unet/
 
 ## Results
 The model achieved a validation Dice score of around 0.80.
+
+## Example Prediction
+
+Below is an example of the model's tumor segmentation:
+
+![Prediction](results/predictions.png)
 
 ## Run
 
